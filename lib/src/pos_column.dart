@@ -23,6 +23,7 @@ class PosColumn {
     if (width < 1 || width > 12) {
       throw Exception('Column width must be between 1..12');
     }
+    // ignore: unnecessary_null_comparison
     if (text != null &&
         text.length > 0 &&
         textEncoded != null &&

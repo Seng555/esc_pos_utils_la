@@ -7,6 +7,7 @@
  */
 
 import 'dart:convert' show json;
+// ignore: unused_import
 import 'dart:convert' show utf8;
 import 'package:flutter/services.dart' show rootBundle;
 
@@ -44,6 +45,7 @@ class CapabilityProfile {
   List<CodePage> codePages;
 
   int getCodePageId(String? codePage) {
+    // ignore: unnecessary_null_comparison
     if (codePages == null) {
       throw Exception("The CapabilityProfile isn't initialized");
     }

@@ -576,7 +576,7 @@ class Generator {
   List<int> image(Image imgSrc, {PosAlign align = PosAlign.center}) {
     List<int> bytes = [];
     // Image alignment
-    bytes += setStyles(PosStyles().copyWith(align: align));
+    bytes += setStyles(const PosStyles().copyWith(align: align));
 
     final Image image = Image.from(imgSrc); // make a copy
     const bool highDensityHorizontal = true;
@@ -601,6 +601,7 @@ class Generator {
 
     final int heightPx = imageRotated.height;
     const int densityByte =
+        // ignore: dead_code
         (highDensityHorizontal ? 1 : 0) + (highDensityVertical ? 32 : 0);
 
     final List<int> header = List.from(cBitImg.codeUnits);
